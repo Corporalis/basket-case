@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "9a213f29-46da-4588-97e4-5301fb46978e",
+		"name": "Basket Case",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Basket 1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"products\": [\n        {\n            \"name\": \"Hat\",\n            \"value\": 10.5\n        },\n        {\n            \"name\": \"Jumper\",\n            \"value\": 54.65\n        }\n    ],\n    \"giftVouchers\": [\"123-GFT\"],\n    \"offerVoucher\": \"\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/discounts/_apply",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"discounts",
+						"_apply"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Basket 2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"products\": [\n        {\n            \"name\": \"Hat\",\n            \"value\": 25.00\n        },\n        {\n            \"name\": \"Jumper\",\n            \"value\": 26.00\n        }\n    ],\n    \"giftVouchers\": [],\n    \"offerVoucher\": \"123-HGR\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/discounts/_apply",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"discounts",
+						"_apply"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Basket 3",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"products\": [\n        {\n            \"name\": \"Hat\",\n            \"value\": 25.00\n        },\n        {\n            \"name\": \"Jumper\",\n            \"value\": 26.00\n        },\n        {\n            \"name\": \"Head Gear\",\n            \"value\": 3.50,\n            \"category\": \"headgear\"\n        }\n    ],\n    \"giftVouchers\": [],\n    \"offerVoucher\": \"123-HGR\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/discounts/_apply",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"discounts",
+						"_apply"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Basket 4",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"products\": [\n        {\n            \"name\": \"Hat\",\n            \"value\": 25.00\n        },\n        {\n            \"name\": \"Jumper\",\n            \"value\": 26.00\n        }\n    ],\n    \"giftVouchers\": [\"123-GFT\"],\n    \"offerVoucher\": \"123-STD\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/discounts/_apply",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"discounts",
+						"_apply"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Basket 5",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"products\": [\n        {\n            \"name\": \"Hat\",\n            \"value\": 25\n        },\n        {\n            \"name\": \"£30 Gift Voucher\",\n            \"value\": 30,\n            \"category\": \"giftvoucher\"\n        }\n    ],\n    \"giftVouchers\": [\n        \"123-GFT\"\n    ],\n    \"offerVoucher\": \"123-STD\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/discounts/_apply",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"discounts",
+						"_apply"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

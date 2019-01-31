@@ -60,7 +60,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BasketCase.cs" />
+    <Compile Include="BasketCaseSteps.cs" />
     <Compile Include="BasketCase.feature.cs">
       <DependentUpon>BasketCase.feature</DependentUpon>
       <AutoGen>True</AutoGen>

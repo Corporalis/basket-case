@@ -7,6 +7,8 @@ namespace BasketCase.Discounts
     public class HeadGearOfferVoucherVisitor : DiscountVisitor
     {
         private const string VoucherCode = "123-HGR";
+        private const string Category = "headgear";
+
         public HeadGearOfferVoucherVisitor() : base(
             basket =>
             {
@@ -14,11 +16,11 @@ namespace BasketCase.Discounts
             },
             basket =>
             {
-                return  basket.Products.Any(p => p.Category == "headgear");
+                return  basket.Products.Any(p => p.Category == Category);
             },
             basket =>
             {
-                var value = basket.Products.Where(p => p.Category == "headgear").Sum(p => p.Value);
+                var value = basket.Products.Where(p => p.Category == Category).Sum(p => p.Value);
                 basket.Discounts.Add(new Discount(Math.Min(value, 5M)));
             },
             basket =>

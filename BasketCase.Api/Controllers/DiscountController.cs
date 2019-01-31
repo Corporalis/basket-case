@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using BasketCase.Discounts;
+﻿using BasketCase.Discounts;
 using BasketCase.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,10 +14,14 @@ namespace BasketCase.Api.Controllers
         {
             _discountContainer = discountContainer;
         }
+
+        // _apply is intentional, _ represent actions (when a verb doesn't exist)
         [HttpPost]
         [Route("_apply")]
-        public IActionResult Apply(Basket basket)
+        public IActionResult Apply(BasketValidation basketValidation)
         {
+            // basket validation excludes items that shouldn't be passed up
+            var basket = new Basket(basketValidation);
             _discountContainer.Accept(basket);
 
             return Ok(basket);

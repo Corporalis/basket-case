@@ -5,14 +5,21 @@ namespace BasketCase.Models
 {
     public class Basket
     {
+        public Basket(BasketValidation basketValidation) : this()
+        {
+            Products = basketValidation.Products;
+            GiftVouchers = basketValidation.GiftVouchers;
+            OfferVoucher = basketValidation.OfferVoucher;
+        }
+
         public Basket()
         {
             Products = new List<Product>();
             GiftVouchers = new List<string>();
             Discounts = new List<Discount>();
             Messages = new List<string>();
-
         }
+
         public List<Product> Products { get; }
         public List<string> GiftVouchers { get; }
         public string OfferVoucher { get; set; }
